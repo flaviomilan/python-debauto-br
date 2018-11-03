@@ -1,14 +1,14 @@
-from remessa import Caixa, Config, Debito, Inclusao
+from debauto.remessa import Caixa, Config, Debito, Inclusao
 
 cfg = Config(
     banco='Caixa',
     codigo='104',
-    agencia='0289',
-    conta='92-0',
-    convenio='308478110001',
-    empresa='APAE Batatais',
+    agencia='0001',
+    conta='11-1',
+    convenio='222222222222',
+    empresa='Empresa Exemplo',
     sequencial='1',
-    vencimento='10/10/2018'
+    vencimento='01/01/1900'
 )
 
 a = Caixa(cfg, [

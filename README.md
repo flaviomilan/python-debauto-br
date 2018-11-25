@@ -49,3 +49,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Inspiration
 * etc
 
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/flaviomilan/python-debauto-br/badge.svg?style=beer-square)](https://beerpay.io/flaviomilan/python-debauto-br)  [![Beerpay](https://beerpay.io/flaviomilan/python-debauto-br/make-wish.svg?style=flat-square)](https://beerpay.io/flaviomilan/python-debauto-br?focus=wish)

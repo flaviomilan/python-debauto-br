@@ -82,9 +82,9 @@ path = '/tmp/'
 remessa.gerar_txt(path)
 ```
 
-O código acima criará um arquivo no path /tmp/. O formado do nome do arquivo segue o padrão *NOMEDOBANCO_DATAVENCIMENTO_SEQUENCIAL.txt*
+O código acima criará um arquivo no path /tmp/. O formato do nome do arquivo segue o padrão *NOMEDOBANCO_DATAVENCIMENTO_SEQUENCIAL.txt*
 
-## Authors
+## Autor
 
 * **Flávio Milan**
 
@@ -92,7 +92,7 @@ Veja a lista completa de contribuidores em [contribuidores](https://github.com/f
 
 ## Licença
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Este projeto está licenciado sobre MIT License - veja [LICENSE.md](LICENSE.md) para mais detalhes.
 
 
 ## Gostou do projeto?

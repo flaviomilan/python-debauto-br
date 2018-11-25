@@ -1,4 +1,7 @@
-class Configuracao:
+# -*- encoding: utf-8 -*-
+
+
+class Configuracao(object):
     """
         Configuração do débito automático
     """
@@ -12,7 +15,7 @@ class Configuracao:
         self.vencimento = vencimento
 
 
-class Debito:
+class Debito(object):
     """
         Débito
     """
@@ -27,7 +30,7 @@ class Debito:
         self.tipo = tipo
 
 
-class Remessa:
+class Remessa(object):
     """
         Remessa Debito Automatico
     """
@@ -59,7 +62,3 @@ class Remessa:
     def valor_total(self):
         """ valor total dos débitos """
         return sum(_.valor for _ in self.debitos)
-
-    def __repr__(self):
-        """ representação do objeto """
-        return "<Remessa: %s>" % self.banco

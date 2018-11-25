@@ -1,3 +1,6 @@
+# -*- encoding: utf-8 -*-
+
+
 class Retorno:
     ''' Retorno Débito Automático '''
 

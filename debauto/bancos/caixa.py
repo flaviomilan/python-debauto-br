@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from debauto.remessa import Remessa
 from debauto.utils import formata_data, formata_valor
 
@@ -82,3 +84,7 @@ class Caixa(Remessa):
                 f.write(_)
 
             f.write(self.get_trailler())
+
+    def __repr__(self):
+        """ representação do objeto """
+        return "<Remessa: %s>" % self.banco

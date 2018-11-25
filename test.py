@@ -1,6 +1,11 @@
+# -*- encoding: utf-8 -*-
+
 from random import randint
 from debauto.remessa import Configuracao, Debito
 from debauto.bancos.caixa import Caixa
+from debauto.bancos.bb import BancoBrasil
+from debauto.bancos.santander import Santander
+
 
 cfg = Configuracao(
     agencia='0001',
@@ -12,14 +17,16 @@ cfg = Configuracao(
 )
 
 a = Caixa(cfg)
+b = BancoBrasil(cfg)
+c = Santander(cfg)
 
 
 a.debitos = Debito(
         randint(1,9999),    # identificacao      25 posições
         randint(1,9999),    # agência            04 posições
         randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200.00,             # valor              15 posições
+        "01/01/1999",       # data vencimento    08 posições
+        123.00,             # valor              15 posições
         "03",               # código da moeda    02 posições
         "Exemplo 1",        # identificação co   59 posições
         0)                  # 0 - Normal    1 - Cancelamento
@@ -28,141 +35,52 @@ a.debitos = Debito(
         randint(1,9999),    # identificacao      25 posições
         randint(1,9999),    # agência            04 posições
         randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200.00,             # valor              15 posições
+        "01/01/1999",       # data vencimento    08 posições
+        243.00,             # valor              15 posições
         "03",               # código da moeda    02 posições
         "Exemplo 2",        # identificação co   59 posições
         0)                  # 0 - Normal    1 - Cancelamento
 
-a.debitos = Debito(
+b.debitos = Debito(
         randint(1,9999),    # identificacao      25 posições
         randint(1,9999),    # agência            04 posições
         randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200.00,             # valor              15 posições
+        "01/01/1999",       # data vencimento    08 posições
+        123.00,             # valor              15 posições
         "03",               # código da moeda    02 posições
-        "Exemplo 3",        # identificação co   59 posições
+        "Exemplo 1",        # identificação co   59 posições
         0)                  # 0 - Normal    1 - Cancelamento
 
-a.debitos = Debito(
+b.debitos = Debito(
         randint(1,9999),    # identificacao      25 posições
         randint(1,9999),    # agência            04 posições
         randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200.00,             # valor              15 posições
+        "01/01/1999",       # data vencimento    08 posições
+        243.00,             # valor              15 posições
         "03",               # código da moeda    02 posições
-        "Exemplo 4",        # identificação co   59 posições
+        "Exemplo 2",        # identificação co   59 posições
         0)                  # 0 - Normal    1 - Cancelamento
 
-a.debitos = Debito(
+c.debitos = Debito(
         randint(1,9999),    # identificacao      25 posições
         randint(1,9999),    # agência            04 posições
         randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200.00,             # valor              15 posições
+        "01/01/1999",       # data vencimento    08 posições
+        123.00,             # valor              15 posições
         "03",               # código da moeda    02 posições
-        "Exemplo 5",        # identificação co   59 posições
+        "Exemplo 1",        # identificação co   59 posições
         0)                  # 0 - Normal    1 - Cancelamento
 
-a.debitos = Debito(
+c.debitos = Debito(
         randint(1,9999),    # identificacao      25 posições
         randint(1,9999),    # agência            04 posições
         randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
+        "01/01/1999",       # data vencimento    08 posições
+        243.00,             # valor              15 posições
         "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
+        "Exemplo 2",        # identificação co   59 posições
         0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-a.debitos = Debito(
-        randint(1,9999),    # identificacao      25 posições
-        randint(1,9999),    # agência            04 posições
-        randint(1,9999),    # conta              13 posições
-        "01/01/1900",       # data vencimento    08 posições
-        200,                # valor              15 posições
-        "03",               # código da moeda    02 posições
-        "Exemplo 6",        # identificação co   59 posições
-        0)                  # 0 - Normal    1 - Cancelamento
-
-
 
 a.gerar_txt('.')
+b.gerar_txt('.')
+c.gerar_txt('.')

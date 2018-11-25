@@ -82,7 +82,7 @@ path = '/tmp/'
 remessa.gerar_txt(path)
 ```
 
-O comando acima criará um arquivo no path /tmp/. O formado do nome do arquivo segue o padrão *NOMEDOBANCO_DATAVENCIMENTO_SEQUENCIAL.txt*
+O código acima criará um arquivo no path /tmp/. O formado do nome do arquivo segue o padrão *NOMEDOBANCO_DATAVENCIMENTO_SEQUENCIAL.txt*
 
 ## Authors
 

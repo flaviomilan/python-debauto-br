@@ -1,13 +1,14 @@
 from debauto.remessa import Remessa
+from debauto.utils import formata_data, formata_valor
 
 
 class Caixa(Remessa):
     """
     Caixa
     """
-    __a = "A{:1}{:20}{:20}{:3}{:20}{:8}{:6}{:2}{:17}{:52}\r\n"
+    __a = "A{:1}{:20}{:20}{:3}{:20}{:8}{:6}{:2}{:17}{:45}{:0>7}\r\n"
     __e = "E{:0>25}{:0<4}{:14}{:8}{:0<15}{:2}{:60}{:6}{:8}{:0>6}{:1}\r\n"
-    __z = "Z{:0>6}{:0>17}{:126}"
+    __z = "Z{:0>6}{:0>17}{:119}{:0>6}{:1}"
 
     def __init__(self, *args, **kwargs):
         super(Caixa, self).__init__(*args, **kwargs)
@@ -28,11 +29,11 @@ class Caixa(Remessa):
             cfg.empresa,                    # 20 - Nome da empresa
             self.__codigo,                  # 3  - Código do banco
             self.__banco,                   # 20 - Nome do banco
-            cfg.vencimento,                 # 8  - Data do movimento
+            formata_data(cfg.vencimento),   # 8  - Data do movimento
             cfg.sequencial,                 # 6  - Número sequencial
             self.__versao,                  # 2  - Versão do layout
             self.__identificacao,           # 17 - Identificação do serviço
-            ''
+            '', '0'
         )
 
     def get_debitos(self):
@@ -41,8 +42,17 @@ class Caixa(Remessa):
 
         for n, x in enumerate(self.debitos, 1):
             linhas.append(self.__e.format(
-                x.identificacao, x.agencia, x.conta, x.vencimento,
-                x.valor, x.moeda, x.livre, "", "", n, x.tipo
+                x.identificacao,
+                x.agencia,
+                x.conta,
+                formata_data(x.vencimento),
+                formata_valor(x.valor),
+                x.moeda,
+                x.livre,
+                "",
+                "",
+                n,
+                x.tipo
             ))
 
         return linhas
@@ -51,6 +61,8 @@ class Caixa(Remessa):
         """ retorna o trailler do arquivo """
         return self.__z.format(
             self.quantidade() + 2,
-            str('%.2f' % self.valor_total()).replace('.', ''),
+            formata_valor(self.valor_total()),
+            '',
+            self.quantidade() + 1,
             ''
         )

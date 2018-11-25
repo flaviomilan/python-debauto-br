@@ -1,2 +1,10 @@
-def data_formatada(data):
-    return "%s%s%s" % (data.year, data.month, data.day)
+import datetime
+
+
+def formata_data(data):
+    data = datetime.datetime.strptime(data, '%d/%m/%Y').date()
+    return data.strftime("%Y%m%d")
+
+
+def formata_valor(valor):
+    return str("%.2f" % valor).replace(".", "")

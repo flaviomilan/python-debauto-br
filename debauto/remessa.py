@@ -1,6 +1,3 @@
-from debauto.utils import data_formatada
-
-
 class Configuracao:
     """
         Configuração do débito automático
@@ -33,7 +30,9 @@ class Debito:
 
 
 class Remessa:
-    """ Remessa Debito Automatico """
+    """
+        Remessa Debito Automatico
+    """
 
     def __init__(self, cfg):
         # assert
@@ -62,6 +61,15 @@ class Remessa:
     def valor_total(self):
         """ valor total dos débitos """
         return sum(_.valor for _ in self.debitos)
+
+    def gerar_txt(self):
+        with open('test.txt', 'w+') as f:
+            f.write(self.get_header())
+
+            for _ in self.get_debitos():
+                f.write(_)
+
+            f.write(self.get_trailler())
 
     def __repr__(self):
         """ representação do objeto """

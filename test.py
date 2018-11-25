@@ -3,8 +3,6 @@ from debauto.remessa import Configuracao, Debito
 from debauto.bancos.caixa import Caixa
 
 cfg = Configuracao(
-    banco='Caixa',
-    codigo='104',
     agencia='0001',
     conta='11-1',
     convenio='222222222222',
@@ -167,4 +165,4 @@ a.debitos = Debito(
 
 
 
-a.gerar_txt()
+a.gerar_txt('.')

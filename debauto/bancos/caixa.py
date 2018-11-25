@@ -19,6 +19,10 @@ class Caixa(Remessa):
         self.__versao = '04'
         self.__identificacao = "DEB AUTOMAT"
 
+    @property
+    def banco(self):
+        return "%s" % self.__banco
+
     def get_header(self):
         """ retorna o header do arquivo """
         cfg = self.configuracao
@@ -66,3 +70,15 @@ class Caixa(Remessa):
             self.quantidade() + 1,
             ''
         )
+
+    def gerar_txt(self, path):
+        cfg = self.configuracao
+        nome = "%s_%s_%s.txt" % (self.banco, formata_data(cfg.vencimento), cfg.sequencial)
+
+        with open('%s%s' % (path, nome), 'w+') as f:
+            f.write(self.get_header())
+
+            for _ in self.get_debitos():
+                f.write(_)
+
+            f.write(self.get_trailler())

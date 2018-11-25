@@ -1,8 +1,23 @@
 # python-debauto-br
 
-Criação de remessas de débito automático
 
-## Getting Started
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
+![PyPI](https://img.shields.io/pypi/v/nine.svg)
+![PyPI - License](https://img.shields.io/pypi/l/Django.svg)
+[![Beerpay](https://beerpay.io/flaviomilan/python-debauto-br/badge.svg?style=beer-square)](https://beerpay.io/flaviomilan/python-debauto-br)  [![Beerpay](https://beerpay.io/flaviomilan/python-debauto-br/make-wish.svg?style=flat-square)](https://beerpay.io/flaviomilan/python-debauto-br?focus=wish)
+
+Criação de remessas de débito automático no formato CNAB 150 da Febraban.
+
+**Bancos**
+
+| Banco           | Criado | Validado |
+| -----           | ---    | ---      |
+| Santander       | Sim    | Sim      |
+| Banco do Brasil | Sim    | Sim      |
+| Caixa           | Sim    | Sim      |
+
+
+## Começando
 
 
 ### Prerequisites

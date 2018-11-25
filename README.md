@@ -23,8 +23,6 @@ Criação de remessas de débito automático no formato CNAB 150 da Febraban.
 
 ### Pré-requisitos
 
-**Este pacote não possui nenhum pré-requisito.**
-
 *Entre em contato com o banco para obter os dados de sua conta e convênio para poder utilizar o serviço de débito automático.* 
 
 

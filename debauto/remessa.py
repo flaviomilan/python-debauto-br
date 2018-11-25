@@ -3,9 +3,7 @@ class Configuracao:
         Configuração do débito automático
     """
 
-    def __init__(self, banco, codigo, agencia, conta, convenio, empresa, sequencial, vencimento):
-        self.banco = banco
-        self.codigo = codigo
+    def __init__(self, agencia, conta, convenio, empresa, sequencial, vencimento):
         self.agencia = agencia
         self.conta = conta
         self.convenio = convenio

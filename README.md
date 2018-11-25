@@ -1,9 +1,10 @@
 # python-debauto-br
 
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
-![PyPI](https://img.shields.io/pypi/v/nine.svg)
-![PyPI - License](https://img.shields.io/pypi/l/Django.svg)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/python-debauto-br.svg)](https://pypi.python.org/pypi/python-debauto-br/)
+[![PyPI version fury.io](https://badge.fury.io/py/python-debauto-br.svg)](https://pypi.python.org/pypi/python-debauto-br/)
+![PyPI - License](https://img.shields.io/pypi/l/python-debauto-br.svg)
 [![Beerpay](https://beerpay.io/flaviomilan/python-debauto-br/badge.svg?style=beer-square)](https://beerpay.io/flaviomilan/python-debauto-br)  [![Beerpay](https://beerpay.io/flaviomilan/python-debauto-br/make-wish.svg?style=flat-square)](https://beerpay.io/flaviomilan/python-debauto-br?focus=wish)
 
 Criação de remessas de débito automático no formato CNAB 150 da Febraban.

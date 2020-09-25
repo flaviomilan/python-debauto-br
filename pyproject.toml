@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-debauto-br"
-version = "0.2.2"
+version = "0.2.3"
 description = "Criação de remessas de débito automático no formato CNAB 150 da Febraban."
 authors = ["Flavio Milan <oflaviomilan@gmail.com>"]
 
